@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static Website with Animation</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #3498db;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .profile h2 {
+            margin-top: 10px;
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        .profile p {
+            font-size: 1rem;
+            color: #7f8c8d;
+            margin-top: 5px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .animation-box {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            margin: 20px auto;
+            border-radius: 10px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Profile Section -->
+        <div class="profile">
+            <!-- Paste the URL of the profile image here -->
+            <img src="https://myterreformapp2025.s3.us-east-1.amazonaws.com/profile.png" alt="huda chulliyil">
+            <h2>Huda</h2>
+            <p>chulliyil</p>
+        </div>
+
+        <!-- Main Content -->
+        <h1>Welcome to My Static Website</h1>
+        <div class="animation-box"></div>
+        <button class="button" onclick="alert('Button Clicked!')">Click Me</button>
+    </div>
+</body>
+</html>
